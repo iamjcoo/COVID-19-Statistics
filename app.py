@@ -1,13 +1,11 @@
 from flask import Flask, render_template, redirect, json, jsonify, url_for
 from babel.numbers import format_decimal
-from easydict import EasyDict as edict
-import numpy as np
 import requests
 import cv2
 import json
 
 app = Flask(__name__)
-app.run(debug=True)
+app.run(debug=False)
 
 @app.route("/")
 def index():
