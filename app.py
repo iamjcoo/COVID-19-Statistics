@@ -4,7 +4,6 @@ import requests
 import json
 
 app = Flask(__name__)
-app.run(debug=False)
 
 @app.route("/")
 def index():
@@ -38,3 +37,7 @@ def country(country):
         return render_template('country.html', data=data, data1=data1[country])
     else:
         return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    # Threaded option to enable multiple instances for multiple user access support
+    app.run(threaded=True, port=5000)
