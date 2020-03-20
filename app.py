@@ -1,7 +1,6 @@
 from flask import Flask, render_template, redirect, json, jsonify, url_for
 from babel.numbers import format_decimal
 import requests
-import cv2
 import json
 
 app = Flask(__name__)
