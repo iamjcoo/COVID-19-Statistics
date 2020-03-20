@@ -1,0 +1,348 @@
+
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2020 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    COVID-19 Statistics
+  </title>
+  <!-- Favicon -->
+  <link href="static/assets/img/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="static/assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="static/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="static/assets/css/argon-dashboard.css?v=1.1.2" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/11e8679c8f.js" crossorigin="anonymous"></script>
+  <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+  <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+  <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet"></head>
+
+<body class="">
+
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <!-- Brand -->
+        <a class="h4 col-md-12 mb-0 text-white text-uppercase" href="/"><center><h1 style="color:white;font-weight:bold;font-size: 30px;">COVID-19 Statistics - {{data['country']}}</h1></center></a>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
+      <div class="container-fluid">
+        <div class="header-body">
+          <!-- Card stats -->
+          <br>
+          <div class="row clearfix">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Confirmed Cases</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['cases'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-user-injured"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since Yesterday</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Active Cases</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['active'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-primary text-white rounded-circle shadow">
+                        <i class="fas fa-user-plus"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last week</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Deaths</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['deaths'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="fas fa-user-alt-slash"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                    <span class="text-nowrap">Since yesterday</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Recovered</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['recovered'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-user-shield"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <div class="row clearfix">
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Today's Cases</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['todayCases'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-yellow text-white rounded-circle shadow">
+                        <i class="fas fa-user-injured"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                    <span class="text-nowrap">Since Yesterday</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Critical Cases</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['critical'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="fas fa-user-tag"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                    <span class="text-nowrap">Since last week</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Today's Deaths</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['todayDeaths'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                        <i class="fas fa-user-alt-slash"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-warning mr-2"><i class="fas fa-arrow-down"></i> 1.10%</span>
+                    <span class="text-nowrap">Since yesterday</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6">
+              <div class="card card-stats mb-4 mb-xl-0">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col">
+                      <h5 class="card-title text-uppercase text-muted mb-0">Cases per One Million</h5>
+                      <span class="h2 font-weight-bold mb-0">{{ data['casesPerOneMillion'] }}</span>
+                    </div>
+                    <div class="col-auto">
+                      <div class="icon icon-shape bg-info text-white rounded-circle shadow">
+                        <i class="fas fa-users"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <p class="mt-3 mb-0 text-muted text-sm">
+                    <span class="text-success mr-2"><i class="fas fa-arrow-up"></i> 12%</span>
+                    <span class="text-nowrap">Since last month</span>
+                  </p> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row mt-5">
+        <div class="col-xl-12 mb-5 mb-xl-0">
+          <div class="card shadow">
+            <div class="card-header border-0">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">Time Series of Recorded Cases, Deaths, and Recoveries</h3>
+                </div>
+                <div class="col text-right">
+
+                </div>
+              </div>
+            </div>
+            <div class="container-fluid">
+              <canvas id="myChart"></canvas>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+            <div class="copyright text-center text-xl-left text-muted">
+              &copy; 2020 <a href="https://github.com/iamjcoo" class="font-weight-bold ml-1" target="_blank">iamjcoo</a>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+              <li class="nav-item">
+                <a href="https://github.com/iamjcoo" class="nav-link" target="_blank">iamjcoo</a>
+              </li>
+              <li class="nav-item">
+                <a href="/about" class="nav-link" target="_blank">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core   -->
+  <script src="static/assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="static/assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <script src="static/assets/js/plugins/chart.js/dist/Chart.min.js"></script>
+  <script src="static/assets/js/plugins/chart.js/dist/Chart.extension.js"></script>
+  <!--   Argon JS   -->
+  <script src="static/assets/js/argon-dashboard.min.js?v=1.1.2"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#csearch").on("keyup", function() {
+      var value = $(this).val().toLowerCase();
+      $("#ctable > tbody > tr").filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+  });
+
+  var s1 = {
+    label: 'Confirmed Cases',
+    borderColor: '#36a2eb',
+    fill: false,
+    backgroundColor: '#36a2eb',
+    data: [
+      {% for item in data1 %}
+      {x: '{{ item['date'] }}',y: '{{ item['confirmed'] }}'},
+      {% endfor %}
+    ]
+  };
+
+  var s2 = {
+    label: 'Deaths',
+    borderColor: '#ff6384',
+    fill: false,
+    backgroundColor: '#ff6384',
+    data: [
+      {% for item in data1 %}
+      {x: '{{ item['date'] }}',y: '{{ item['deaths'] }}'},
+      {% endfor %}
+    ]
+  };
+
+  var s3 = {
+    label: 'Recovered',
+    borderColor: '#90ee90',
+    fill: false,
+    backgroundColor: '#90ee90',
+    data: [
+      {% for item in data1 %}
+      {x: '{{ item['date'] }}',y: '{{ item['recovered'] }}'},
+      {% endfor %}
+    ]
+  };
+
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var chart = new Chart(ctx, {
+    type: 'line',
+    data: { datasets: [s1, s2, s3] },
+    options: {
+      scales: {
+        xAxes: [{
+          type: 'time'
+        }]
+      }
+    }
+  });
+  </script>
+</body>
+
+</html>
