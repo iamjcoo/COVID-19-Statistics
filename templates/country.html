@@ -300,9 +300,7 @@
     fill: false,
     backgroundColor: '#36a2eb',
     data: [
-      {% for item in data1 %}
-      {x: '{{ item['date'] }}',y: '{{ item['confirmed'] }}'},
-      {% endfor %}
+      {% for item in data1 %}{x: moment('{{item['date']}}',"YYYY-MM-DD"),y: '{{ item['confirmed'] }}'},{% endfor %}
     ]
   };
 
@@ -312,9 +310,7 @@
     fill: false,
     backgroundColor: '#ff6384',
     data: [
-      {% for item in data1 %}
-      {x: '{{ item['date'] }}',y: '{{ item['deaths'] }}'},
-      {% endfor %}
+      {% for item in data1 %}{x: moment('{{item['date']}}',"YYYY-MM-DD"),y: '{{ item['deaths'] }}'},{% endfor %}
     ]
   };
 
@@ -324,9 +320,7 @@
     fill: false,
     backgroundColor: '#90ee90',
     data: [
-      {% for item in data1 %}
-      {x: '{{ item['date'] }}',y: '{{ item['recovered'] }}'},
-      {% endfor %}
+      {% for item in data1 %}{x: moment('{{item['date']}}',"YYYY-MM-DD"),y: '{{ item['recovered'] }}'},{% endfor %}
     ]
   };
 
